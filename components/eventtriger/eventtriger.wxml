@@ -1,0 +1,2 @@
+<!--components/eventtriger/eventtriger.wxml-->
+<button size="mini" bind:tap="handleclick">+1</button>

@@ -13,7 +13,8 @@ Page({
     inputShowed: false,
     inputVal: "",
     nowTime: "",
-    titles: 10
+    titles: 10,
+    counter:0
   },
   //事件处理函数
   bindViewTap: function() {
@@ -89,5 +90,11 @@ Page({
   },
   handleItemClick(event){
     console.log(event)
+  },
+  pageevent(event){
+    console.log(event)
+    this.setData({
+      counter: this.data.counter+1
+    })
   }
 })

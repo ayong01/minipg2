@@ -36,4 +36,7 @@
 		</view>
 	</block>
 </view>
-<mylist></mylist>
+<mylist list='{{["衣服","鞋子","帽子","裤子"]}}'></mylist>
+*******************************************************************
+<view>当前计数：{{counter}}</view> 
+<eventtriger bind:eventout="pageevent"></eventtriger>

@@ -1,5 +1,6 @@
 {
   "usingComponents": { 
-    "mylist":"/components/list/list"
+    "mylist":"/components/list/list",
+    "eventtriger":"/components/eventtriger/eventtriger"
   }
 }

@@ -1,0 +1,21 @@
+/* components/list/list.wxss */
+.container{
+  height: 50rpx;
+  display: flex;
+  line-height: 50rpx;
+}
+
+.box{
+  flex: 1;
+  text-align: center;
+}
+
+.active{
+  color:red;
+}
+
+.active text{
+  padding:5rpx 10rpx;
+  border-bottom: 6rpx solid red;
+}
+

@@ -1,13 +1,38 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<scroll-view class="div" scroll-x>
+  <view class="div1" wx:for="{{10}}">{{item}}</view>
+</scroll-view>
+<scroll-view class="div2" scroll-y>
+	<!-- <view class="div3" wx:for="{{10}}" wx:key="i">{{i}}</view> -->
+	<block wx:for="{{10}}" wx:for-item="{{i}}">
+		<view class="div3">{{i}}</view>
+	</block>
+
+</scroll-view>
+<!-- wxui:搜索 -->
+<view class="weui-search-bar {{inputShowed ? 'weui-search-bar_focusing' : ''}}" id="searchBar">
+			<form class="weui-search-bar__form">
+				<view class="weui-search-bar__box">
+					<i class="weui-icon-search"></i>
+                    <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <span class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput"></span>
+				</view>
+				<label class="weui-search-bar__label" bindtap="showInput">
+					<i class="weui-icon-search"></i>
+                    <span class="weui-search-bar__text">搜索</span>
+				</label>
+			</form>
+            <view class="weui-search-bar__cancel-btn" bindtap="hideInput">取消</view>
+		</view>
+<view>{{nowTime}}</view>
+
+<view class="">
+	<block wx:for="{{titles}}" wx:key="{{index}}" wx:item="{{item}}">
+		<view class="item"
+					bindtap="handleItemClick"
+					data-index="{{index}}"
+					data-item="{{item}}">
+			{{item}}
+		</view>
+	</block>
 </view>

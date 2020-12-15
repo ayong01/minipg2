@@ -1,21 +1,29 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@import '../../wxss/style/weui-searchbar.wxss';
+
+.div{
+  background: red;
+  white-space: nowrap;
+  margin: 10px
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.div1{
+  background: yellow;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.div2{
+  background: red;
+  margin: 10px;
+  height: 150px;
 }
 
-.usermotto {
-  margin-top: 200px;
+.div3{
+  background: blue;
+  margin: 10px;
+  height: 50px;
 }
+

@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "商品分类",
+  "onReachBottomDistance":50,
+  "pageOrientation":"portrait"
 }

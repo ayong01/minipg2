@@ -12,9 +12,9 @@
     "navigationBarTitleText": "购物街",
     "navigationBarTextStyle":"black",
     "enablePullDownRefresh":true,
-    "backgroundTextStyle": "dark",
-    "backgroundColor":"#13AF12",
-    "backgroundColorTop":"#E6E6E6",
+    "backgroundTextStyle": "light",
+    "backgroundColor":"#1DB34C",
+    "backgroundColorTop":"#5093FE",
     "onReachBottomDistance":50,
     "pageOrientation":"portrait",
     "pageOrientation": "auto"
@@ -46,6 +46,12 @@
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
-  "darkmode": true,
-  "lazyCodeLoading": "requiredComponents"
+  "darkmode": false,
+  "lazyCodeLoading": "requiredComponents",
+  "debug": true,
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
 }

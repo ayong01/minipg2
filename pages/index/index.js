@@ -3,11 +3,17 @@
 const app = getApp()
 
 Page({
+  mixins: [require('../../mixin/themeChanged')],
+  
   data: {
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    inputShowed: false,
+    inputVal: "",
+    nowTime: "",
+    titles: 10
   },
   //事件处理函数
   bindViewTap: function() {
@@ -43,6 +49,13 @@ Page({
       })
     }
   },
+  onLoad() {
+    setInterval(() => {
+      this.setData({
+        nowTime: new Date().toLocaleString()
+      })
+    }, 1000)
+  }, 
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -50,5 +63,31 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+  
+  showInput: function () {
+      this.setData({
+          inputShowed: true
+      });
+  },
+  hideInput: function () {
+      this.setData({
+          inputVal: "",
+          inputShowed: false
+      });
+  },
+  clearInput: function () {
+      this.setData({
+          inputVal: ""
+      });
+  },
+  inputTyping: function (e) {
+      this.setData({
+          inputVal: e.detail.value
+      });
+  },
+  handleItemClick(event){
+    console.log(event)
   }
 })
